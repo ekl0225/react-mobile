@@ -16,6 +16,25 @@
   --preset-secondary-black-olive: #32372c;
   --preset-secondary-carbon-black: #121314;
 
+  /* Moodboard Colors */
+  --preset-spring-olive-petal: #a3a380;
+  --preset-spring-golden-clover: #d7ce93;
+  --preset-spring-arctic-daisy: #efebce;
+  --preset-spring-rose-blush: #d8a48f;
+  --preset-spring-peach-blossom: #bb8588;
+
+  --preset-royal-sapphire: #3c507d;
+  --preset-royal-royal-blue: #112250;
+  --preset-royal-quicksand: #e0c58f;
+  --preset-royal-swan-wing: #f5f0e9;
+  --preset-royal-shellstone: #d9cbc2;
+
+  --preset-rosewater: #d8a694;
+  --preset-rosewater-copper-rose: #a86a65;
+  --preset-rosewater-dusty-rose: #ab8882;
+  --preset-rosewater-china-doll: #e0cbb9;
+  --preset-rosewater-plum-wine: #754b4d;
+
   /* Font family */
   --preset-font-instrument-serif: "Instrument Serif", serif;
   --preset-font-italianno: "Italianno", cursive;

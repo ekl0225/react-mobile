@@ -24,8 +24,8 @@ export default function BurgerMenu() {
       <nav className={`${styles.menu} ${isOpen ? styles.overlay : ""}`}>
         <ul>
           <li>
-            <a href="/aboutme.html" onClick={closeMenu}>
-              About Me
+            <a href="/Moodboards" onClick={closeMenu}>
+              MoodBoards
             </a>
           </li>
           <li>
