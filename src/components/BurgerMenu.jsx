@@ -1,12 +1,15 @@
-import React, { useState } from "react";
+import { useState } from "react";
+import { Link, useLocation } from "react-router-dom";
 import styles from "./BurgerMenu.module.css";
 
 export default function BurgerMenu() {
   const [isOpen, setIsOpen] = useState(false);
+  const location = useLocation();
 
   const toggleMenu = () => setIsOpen(!isOpen);
-
   const closeMenu = () => setIsOpen(false);
+
+  const currentPath = location.pathname.toLowerCase();
 
   return (
     <>
@@ -23,21 +26,27 @@ export default function BurgerMenu() {
 
       <nav className={`${styles.menu} ${isOpen ? styles.overlay : ""}`}>
         <ul>
-          <li>
-            <a href="/Moodboards" onClick={closeMenu}>
-              MoodBoards
-            </a>
-          </li>
-          <li>
-            <a href="/projects.html" onClick={closeMenu}>
-              Projects
-            </a>
-          </li>
-          <li>
-            <a href="/contact.html" onClick={closeMenu}>
-              Contact
-            </a>
-          </li>
+          {currentPath !== "/home" && (
+            <li>
+              <Link to="/home" onClick={closeMenu}>
+                Home
+              </Link>
+            </li>
+          )}
+          {currentPath !== "/moodboards" && (
+            <li>
+              <Link to="/moodboards" onClick={closeMenu}>
+                MoodBoards
+              </Link>
+            </li>
+          )}
+          {currentPath !== "/projects" && (
+            <li>
+              <Link to="/projects" onClick={closeMenu}>
+                Projects
+              </Link>
+            </li>
+          )}
         </ul>
       </nav>
     </>

@@ -12,18 +12,20 @@
   margin-top: 2rem;
   font-size: 2rem;
   color: var(--preset-rosewater-plum-wine);
+  font-family: --preset-font-instrument-serif;
+  font-weight: large;
 }
 
 .Board {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(3, 1fr);
-  gap: 1rem;
+  gap: 0.5rem;
   margin-bottom: 2rem;
   width: 100%;
   max-width: 800px;
   background-color: var(--preset-rosewater-china-doll);
-  padding: 2rem;
+  padding: 0.5rem;
   border-radius: 0.5rem;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
   height: 25rem;
@@ -38,7 +40,7 @@
 
 .ImageBox {
   width: 100%;
-  min-height: 110px;
+  min-height: 10px;
   object-fit: cover;
 }
 
@@ -60,13 +62,30 @@
   color: var(--preset-spring-peach-blossom);
   font-weight: bold;
   font-size: 1.2rem;
-  padding: 1rem;
+  padding-top: 1rem;
 }
 
-.FabricStrip {
-  height: 3rem;
-  display: flex;
-  gap: 0.5rem;
+.RosewaterText p {
+  font-size: 2.1rem;
+}
+
+.QuoteBox {
+  background-color: rgba(255, 255, 255, 0.35);
+  padding: 0.5rem;
+  min-width: 9rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.QuoteBox h2 {
+  margin: 0;
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.QuoteBox p {
+  margin-top: 0.4rem;
+  font-size: 1rem;
+  font-style: italic;
 }
 
 .Palette {
@@ -74,6 +93,17 @@
   justify-content: space-between;
   width: 100%;
   max-width: 500px;
+  flex-direction: row;
+}
+.InnerPalette {
+  grid-column: 1 / 5;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1rem;
+}
+
+.SwitchButton:hover {
+  background-color: var(--preset-rosewater-copper-rose);
 }
 
 .Swatch {
@@ -83,7 +113,6 @@
 }
 
 .SwitchButton {
-  margin-top: 2rem;
   padding: 0.5rem 1.5rem;
   background-color: var(--preset-rosewater-plum-wine);
   color: white;
@@ -92,8 +121,4 @@
   cursor: pointer;
   font-size: 1rem;
   transition: background-color 0.3s;
-}
-
-.SwitchButton:hover {
-  background-color: var(--preset-rosewater-copper-rose);
 }

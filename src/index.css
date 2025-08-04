@@ -40,6 +40,11 @@
   --preset-font-italianno: "Italianno", cursive;
   --preset-font-montserrat: "Montserrat", sans-serif;
   --preset-font-mea-culpa: "Mea Culpa", cursive;
+
+  /* Moodboard fonts */
+  --preset-font-playwrite: "Playwrite AU QLD", cursive;
+  --preset-font-notoserif: "Noto Serif", serif;
+  --preset-font-dancingscript: "Dancing Script", cursive;
 }
 
 body {
