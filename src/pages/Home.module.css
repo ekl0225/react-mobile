@@ -1,0 +1,206 @@
+/* ------------------------ Font Display ------------------------ */
+.Fonts {
+  color: var(--preset-primary-dust-storm);
+  z-index: 1;
+  padding: 5rem;
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(43, 43, 27, 0.5);
+}
+
+InstrumentSerif {
+  font-family: var(--preset-font-instrument-serif);
+  font-size: 40px;
+}
+
+.Italianno {
+  font-family: var(--preset-font-italianno);
+  font-size: 40px;
+}
+
+/* ------------------------ Intro text ------------------------ */
+.Intro {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 42rem;
+  background-color: rgba(38, 38, 34, 0.8);
+}
+
+.WhiteFlowers {
+  position: absolute;
+  right: 0;
+  height: 100%;
+  width: auto;
+  border-radius: 0 0 0 50%;
+  transform: rotate(-20deg);
+  opacity: 0.7;
+  z-index: -1;
+  pointer-events: none;
+}
+
+.IntroText {
+  z-index: 0;
+  text-align: center;
+  padding: 10rem 5rem 5rem;
+  line-height: 2.3rem;
+  color: var(--preset-secondary-floral-white);
+  font-family: var(--preset-font-montserrat);
+  font-weight: 400;
+}
+
+.Meaculpa {
+  font-family: var(--preset-font-mea-culpa);
+  font-size: 25px;
+  color: var(--preset-secondary-floral-white);
+  text-shadow: 0 0 5px #f0c7b8, 0 0 10px #f0c7b8, 0 0 20px #f0c7b8,
+    0 0 40px #f0c7b8;
+}
+
+/* ------------------------ Color Palette ------------------------ */
+.ColorPalette {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  position: relative;
+}
+
+.Colors {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.PrimaryColors {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  text-align: center;
+  align-items: center;
+}
+
+.PrimaryColors .Colors {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  width: fit-content;
+  justify-items: center;
+}
+
+.SecondaryColors {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  text-align: center;
+  align-items: center;
+}
+
+.SecondaryColors .Colors {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  width: fit-content;
+}
+
+.ColorItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 10px;
+  font-size: 0.8rem;
+  text-align: center;
+  flex: 0 0 auto;
+}
+
+.Primary,
+.Secondary {
+  width: 80px;
+  height: 40px;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: transform 0.2s ease;
+}
+
+.Primary:hover,
+.Secondary:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+
+/* Diverse */
+.Pinetree {
+  border: 2px solid var(--preset-primary-silver-pink);
+}
+
+.Title {
+  font-family: var(--preset-font-italianno);
+  font-size: 2.5rem;
+  color: var(--preset-primary-dust-storm);
+  margin-bottom: 10px;
+  text-align: center;
+  z-index: 1;
+}
+
+.HelpText {
+  font-size: 1rem;
+  margin-top: -5px;
+  margin-bottom: 12px;
+  opacity: 0.8;
+  font-family: var(--preset-font-montserrat);
+}
+
+/* ------------------------ Blomsten nederst ------------------------ */
+.CornerFlower {
+  position: absolute;
+  bottom: -55rem;
+  opacity: 0.6;
+  transform: rotate(-15deg) scaleX(-1);
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* ------------------------ Media Queries (Desktop) ------------------------ */
+
+@media (min-width: 768px) {
+  .Hero {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto auto auto;
+    gap: 20px;
+    width: 100%;
+  }
+
+  .Fonts {
+    padding: 100px 50px 100px 150px;
+  }
+
+  .Intro {
+    height: 377px;
+  }
+
+  .IntroText {
+    font-size: large;
+    margin-right: 140px;
+    max-width: 600px;
+  }
+
+  .ColorPalette {
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: flex-start;
+  }
+
+  .PrimaryColors {
+    padding-left: 50px;
+    width: 50%;
+  }
+
+  .CornerFlower {
+    bottom: -20rem;
+    left: 0;
+  }
+}

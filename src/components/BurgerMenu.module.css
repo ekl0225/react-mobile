@@ -1,0 +1,101 @@
+/* BurgerMenu.module.css */
+
+.burgerMenu {
+  position: fixed;
+  top: 30px;
+  left: 30px;
+  height: 27px;
+  width: 27px;
+  cursor: pointer;
+  z-index: 1002;
+  transition: all 0.3s ease-in-out;
+}
+
+.burgerMenu.close {
+  position: fixed;
+}
+
+.bar,
+.bar::before,
+.bar::after {
+  background: var(--preset-primary-tumble-weed);
+  display: block;
+  height: 2px;
+  width: 27px;
+  position: absolute;
+  content: "";
+  transition: 0.3s ease-in-out;
+}
+
+.bar {
+  top: 13px;
+  right: 0;
+}
+
+.bar::before {
+  top: -10px;
+  left: 0;
+}
+
+.bar::after {
+  top: 10px;
+  left: 0;
+}
+
+.burgerMenu.close .bar {
+  transform: rotate(-45deg);
+}
+
+.burgerMenu.close .bar::before {
+  top: 0;
+  transform: rotate(90deg);
+}
+
+.burgerMenu.close .bar::after {
+  top: 0;
+  transform: rotate(90deg);
+  opacity: 0;
+  width: 0;
+}
+
+.menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 40%;
+  height: 0;
+  opacity: 0;
+  visibility: hidden;
+  background: var(--preset-secondary-black-olive);
+  z-index: 1000;
+  text-align: center;
+  overflow: hidden;
+  transition: all 0.3s ease-in-out;
+}
+
+.menu.overlay {
+  height: 100%;
+  visibility: visible;
+  opacity: 0.9;
+}
+
+.menu ul {
+  list-style: none;
+  margin: 0;
+  padding: 100px 0 0;
+}
+
+.menu li {
+  margin-bottom: 30px;
+}
+
+.menu a {
+  color: var(--preset-primary-dust-storm);
+  font-size: 28px;
+  text-decoration: none;
+  transition: text-decoration 0.2s ease;
+}
+
+.menu a:hover {
+  text-decoration: underline;
+}

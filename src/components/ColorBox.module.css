@@ -1,0 +1,59 @@
+.Primary:hover,
+.Secondary:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+
+/* Funksjonell boks med kopi-knapp */
+.ColorBox {
+  width: 80px;
+  height: 40px;
+  position: relative;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--preset-secondary-floral-white);
+  border-radius: 0;
+  z-index: 1;
+  transition: background-color 0.2s ease;
+}
+.ColorText {
+  color: var(--preset-primary-silver-pink);
+  /* color: var(--preset-secondary-floral-white); */
+  margin: 4px 0 0 0;
+  font-family: var(--preset-font-montserrat);
+  font-size: 0.8rem;
+  text-align: center;
+  font-weight: 500;
+  text-shadow: 0 0 5px #1c1817, 0 0 15px #17110f, 0 0 20px #170e0a,
+    0 0 10px #3a3431;
+  z-index: 1;
+  position: relative;
+}
+
+.CopyLabel {
+  opacity: 0;
+  font-size: 0.9rem;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+  z-index: 2;
+}
+
+.ColorBox:hover .CopyLabel {
+  opacity: 1;
+}
+
+/* Hover-effekt */
+.ColorBox::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0);
+  transition: background-color 0.2s ease;
+  z-index: 0;
+}
+
+.ColorBox:hover::after {
+  background-color: rgba(0, 0, 0, 0.2);
+}

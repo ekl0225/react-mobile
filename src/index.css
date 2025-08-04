@@ -1,0 +1,28 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  /* Primary colors */
+  --preset-primary-pine-tree: #2b2b1b;
+  --preset-primary-burnished-brown: #a88176;
+  --preset-primary-tumble-weed: #d79b87;
+  --preset-primary-dust-storm: #edcfbe;
+  --preset-primary-silver-pink: #cdb4b2;
+
+  /* Secondary colors */
+  --preset-secondary-floral-white: #faf7ef;
+  --preset-secondary-black-olive: #32372c;
+  --preset-secondary-carbon-black: #121314;
+
+  /* Font family */
+  --preset-font-instrument-serif: "Instrument Serif", serif;
+  --preset-font-italianno: "Italianno", cursive;
+  --preset-font-montserrat: "Montserrat", sans-serif;
+  --preset-font-mea-culpa: "Mea Culpa", cursive;
+}
+
+body {
+  background: var(--preset-primary-pine-tree);
+}
