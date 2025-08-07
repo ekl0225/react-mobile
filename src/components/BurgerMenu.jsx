@@ -14,17 +14,17 @@ export default function BurgerMenu() {
   return (
     <>
       <div
-        className={`${styles.burgerMenu} ${isOpen ? styles.close : ""}`}
+        className={`${styles.BurgerMenu} ${isOpen ? styles.close : ""}`}
         onClick={toggleMenu}
         role="button"
         aria-label="Toggle menu"
         tabIndex={0}
         onKeyDown={(e) => e.key === "Enter" && toggleMenu()}
       >
-        <span className={styles.bar}></span>
+        <span className={styles.Bar}></span>
       </div>
 
-      <nav className={`${styles.menu} ${isOpen ? styles.overlay : ""}`}>
+      <nav className={`${styles.Menu} ${isOpen ? styles.overlay : ""}`}>
         <ul>
           {currentPath !== "/home" && (
             <li>

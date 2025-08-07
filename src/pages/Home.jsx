@@ -6,27 +6,29 @@ import { Typewriter } from "react-simple-typewriter";
 function Home() {
   return (
     <>
-      <div className={styles.Intro}>
-        <img
-          className={styles.WhiteFlowers}
-          src={flowerWhite}
-          alt="White Flowers"
-        />
-        <div className={styles.IntroText}>
-          <p className={styles.HeroTypewriter}>
-            Hei, jeg heter <span id={styles.Meaculpa}>E</span>milia. <br />
-            <Typewriter
-              words={[
-                "Jeg er frontend utvikler og designentusiast🎨. Jeg elsker å skape digitale løsninger som både ser bra ut og fungerer sømløst. Gjennom kreativ koding og godt design bringer jeg ideer til live i nettleseren.",
-              ]}
-              loop={1}
-              cursor
-              cursorStyle="|"
-              typeSpeed={50}
-              deleteSpeed={30}
-              delaySpeed={1500}
-            />
-          </p>
+      <div className={styles.MobileOnly}>
+        <div className={styles.Intro}>
+          <img
+            className={styles.WhiteFlowers}
+            src={flowerWhite}
+            alt="White Flowers"
+          />
+          <div className={styles.IntroText}>
+            <p className={styles.HeroTypewriter}>
+              Hei, jeg heter <span id={styles.Meaculpa}>E</span>milia. <br />
+              <Typewriter
+                words={[
+                  "Jeg er frontend utvikler og designentusiast🎨. Jeg elsker å skape digitale løsninger som både ser bra ut og fungerer sømløst. Gjennom kreativ koding og godt design bringer jeg ideer til live i nettleseren.",
+                ]}
+                loop={1}
+                cursor
+                cursorStyle="|"
+                typeSpeed={50}
+                deleteSpeed={30}
+                delaySpeed={1500}
+              />
+            </p>
+          </div>
         </div>
       </div>
 
@@ -45,6 +47,32 @@ function Home() {
               <p>Lorem Ipsum</p>
             </div>
             <p>Italianno</p>
+          </div>
+        </div>
+
+        <div className={styles.DesktopOnly}>
+          <div className={styles.Intro}>
+            <img
+              className={styles.WhiteFlowers}
+              src={flowerWhite}
+              alt="White Flowers"
+            />
+            <div className={styles.IntroText}>
+              <p className={styles.HeroTypewriter}>
+                Hei, jeg heter <span id={styles.Meaculpa}>E</span>milia. <br />
+                <Typewriter
+                  words={[
+                    "Jeg er frontend utvikler og designentusiast🎨. Jeg elsker å skape digitale løsninger som både ser bra ut og fungerer sømløst. Gjennom kreativ koding og godt design bringer jeg ideer til live i nettleseren.",
+                  ]}
+                  loop={1}
+                  cursor
+                  cursorStyle="|"
+                  typeSpeed={50}
+                  deleteSpeed={30}
+                  delaySpeed={1500}
+                />
+              </p>
+            </div>
           </div>
         </div>
 

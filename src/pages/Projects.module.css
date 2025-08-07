@@ -1,0 +1,51 @@
+.ProjectGallery {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 2rem;
+  flex-wrap: wrap;
+}
+
+.ProjectCard {
+  flex: 1 1 calc(33.333% - 1rem);
+  background-color: #fff;
+  border: 2px solid #ddd;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  cursor: pointer;
+  position: relative;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.ProjectCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.Active {
+  background-color: #f9f9f9;
+  border-color: #bbb;
+}
+
+.ProjectDetails {
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid #ccc;
+}
+
+.ProjectDetails button {
+  margin-top: 1rem;
+  padding: 0.4rem 1rem;
+  background-color: #444;
+  color: white;
+  border: none;
+  border-radius: 0.4rem;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .ProjectCard {
+    flex: 1 1 100%;
+  }
+}

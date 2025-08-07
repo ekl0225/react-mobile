@@ -81,7 +81,11 @@ function MoodBoards() {
       </h1>
 
       <div className={styles.Board} style={{ backgroundColor: mood.archColor }}>
-        <div className={styles.LeftColumn}>
+        <div
+          className={`${styles.LeftColumn} ${
+            mood.name === "Rosewater" ? styles.RosewaterLayout : ""
+          }`}
+        >
           {/* Rosewater: show quote box here */}
           {mood.name === "Rosewater" && (
             <div className={styles.QuoteBox} style={{ fontFamily: mood.font }}>
@@ -108,12 +112,13 @@ function MoodBoards() {
 
         <div className={styles.RightColumn}>
           <div
-            className={styles.ArchBox}
+            className={`${styles.ArchBox} ${
+              mood.name === "Rosewater" ? styles.RosewaterArch : ""
+            }`}
             style={{
               backgroundColor: mood.archColor,
               color: mood.textColor,
               fontFamily: mood.font,
-              fontSize: mood.name === "Rosewater" ? "1.6rem" : "1.2rem",
             }}
           >
             <p>{mood.name}</p>

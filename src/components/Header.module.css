@@ -1,0 +1,41 @@
+.Header {
+  position: relative;
+  background-color: var(--preset-primary-burnished-brown);
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Navbar vises bare på desktop */
+.Navbar {
+  display: flex;
+  justify-content: space-evenly;
+  flex: 1;
+}
+
+/* Skjul navbar på mobil */
+@media (max-width: 767px) {
+  .Header {
+    display: none;
+  }
+}
+
+/* Styling på lenker i navbar */
+.NavLink {
+  color: var(--preset-secondary-black-olive);
+  font-family: var(--preset-font-montserrat);
+  font-weight: 400;
+  font-size: 1rem;
+  text-decoration: none;
+  border: 2px solid var(--preset-secondary-black-olive);
+  padding: 10px 40px;
+  display: inline-block;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.NavLink:hover {
+  color: var(--preset-secondary-floral-white);
+  background-color: var(--preset-secondary-black-olive);
+  text-decoration: none;
+}
