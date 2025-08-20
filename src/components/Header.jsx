@@ -14,6 +14,9 @@ function Header() {
         <Link to="/projects" className={styles.NavLink}>
           <p>Projects</p>
         </Link>
+        <Link to="/skills" className={styles.NavLink}>
+          <p>Skills</p>
+        </Link>
       </div>
     </header>
   );

@@ -1,0 +1,58 @@
+.skillsPage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+}
+
+.githubLink {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 3rem;
+  font-size: 1.5rem;
+  text-decoration: none;
+  color: var(--gree);
+  background-color: var(--preset-primary-dust-storm);
+  margin-top: 3rem;
+  padding: 0.5rem 1rem;
+  transition: all 0.2s ease;
+}
+
+.githubLink:hover {
+  background-color: #e1e4e8;
+}
+
+.skillsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 1.5rem;
+  width: 100%;
+  max-width: 600px;
+}
+
+.skillCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #fff;
+  border-radius: 12px;
+  padding: 1rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease;
+}
+
+.skillCard:hover {
+  transform: translateY(-5px);
+}
+
+.icon {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+  color: #3b4cca;
+}
+
+.skillCard p {
+  margin: 0;
+  font-weight: 500;
+}

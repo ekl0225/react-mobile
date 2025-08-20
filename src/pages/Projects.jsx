@@ -1,57 +1,72 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import styles from "./Projects.module.css";
 
-const projects = [
-  {
-    id: 1,
-    title: "MoodBoards",
-    description: "An interactive moodboard viewer with themed color palettes.",
-    details:
-      "In this project, I built 3 moodboards with toggle functionality...",
-  },
-  {
-    id: 2,
-    title: "Todo App",
-    description: "A minimal and clean todo list using React state.",
-    details:
-      "This project uses useState and props to manage and display todos...",
-  },
-  {
-    id: 3,
-    title: "Cat Facts",
-    description: "Fetches random cat facts from an API and displays them.",
-    details: "A good example of using useEffect and API requests in React...",
-  },
-];
-
 export default function Projects() {
+  const projects = [
+    {
+      title: "Craftsvilla challenge",
+      url: "https://craftsvilla-challenge.netlify.app/",
+    },
+    {
+      title: "Pokemon API",
+      url: "https://starlit-blini-830ffd.netlify.app/",
+    },
+    {
+      title: "Drumkit",
+      url: "https://candid-pothos-307ff1.netlify.app/",
+    },
+    {
+      title: "Cirkle Maker",
+      url: "https://fanciful-conkies-9edca9.netlify.app/",
+    },
+  ];
+
   const [activeProject, setActiveProject] = useState(null);
 
-  const toggleProject = (id) => {
-    setActiveProject(activeProject === id ? null : id);
-  };
-
   return (
-    <div className={styles.ProjectGallery}>
-      {projects.map((project) => (
-        <div
-          key={project.id}
-          className={`${styles.ProjectCard} ${
-            activeProject === project.id ? styles.Active : ""
-          }`}
-          onClick={() => toggleProject(project.id)}
-        >
-          <h3>{project.title}</h3>
-          <p>{project.description}</p>
+    <div className={styles.projectsWrapper}>
+      <h1>My Projects</h1>
+      <div className={styles.projectsGrid}>
+        {projects.map((project, index) => (
+          <div
+            key={index}
+            className={styles.projectBox}
+            onClick={() => setActiveProject(project)}
+          >
+            <h2 className={styles.title}>{project.title}</h2>
+            <p>Click to preview</p>
+          </div>
+        ))}
+      </div>
 
-          {activeProject === project.id && (
-            <div className={styles.ProjectDetails}>
-              <p>{project.details}</p>
-              <button onClick={() => setActiveProject(null)}>Close</button>
-            </div>
-          )}
+      {activeProject && (
+        <div
+          className={styles.modalOverlay}
+          onClick={() => setActiveProject(null)}
+        >
+          <div
+            className={styles.modalContent}
+            onClick={(e) => e.stopPropagation()}
+          >
+            <h2 className={styles.title}>{activeProject.title}</h2>
+            <iframe
+              src={activeProject.url}
+              width="100%"
+              height="500"
+              style={{ border: "none" }}
+              title={activeProject.title}
+            />
+            <a
+              href={activeProject.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className={styles.projectButton}
+            >
+              Open full project →
+            </a>
+          </div>
         </div>
-      ))}
+      )}
     </div>
   );
 }

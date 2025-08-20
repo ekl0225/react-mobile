@@ -4,6 +4,7 @@ import Home from "./pages/Home";
 import MoodBoards from "./pages/MoodBoards";
 import Header from "./components/Header";
 import Projects from "./pages/Projects";
+import Skills from "./pages/Skills";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
         <Route path="/home" element={<Home />} />
         <Route path="/moodboards" element={<MoodBoards />} />
         <Route path="/projects" element={<Projects />} />
+        <Route path="/skills" element={<Skills />} />
       </Routes>
     </Router>
   );

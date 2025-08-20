@@ -47,6 +47,13 @@ export default function BurgerMenu() {
               </Link>
             </li>
           )}
+          {currentPath !== "/skills" && (
+            <li>
+              <Link to="/skills" onClick={closeMenu}>
+                Skills
+              </Link>
+            </li>
+          )}
         </ul>
       </nav>
     </>
