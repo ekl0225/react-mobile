@@ -12,7 +12,7 @@ function App() {
       <BurgerMenu />
       <Header />
       <Routes>
-        <Route path="/home" element={<Home />} />
+        <Route path="/" element={<Home />} />
         <Route path="/moodboards" element={<MoodBoards />} />
         <Route path="/projects" element={<Projects />} />
         <Route path="/skills" element={<Skills />} />

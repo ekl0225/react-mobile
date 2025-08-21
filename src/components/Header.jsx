@@ -5,7 +5,7 @@ function Header() {
   return (
     <header className={styles.Header}>
       <div className={styles.Navbar}>
-        <Link to="/Home" className={styles.NavLink}>
+        <Link to="/" className={styles.NavLink}>
           <p>Home</p>
         </Link>
         <Link to="/MoodBoards" className={styles.NavLink}>

@@ -2,6 +2,7 @@ import styles from "./Home.module.css";
 import flowerWhite from "../assets/white-flowers-no-back.png";
 import ColorBox from "../components/ColorBox";
 import { Typewriter } from "react-simple-typewriter";
+import { FaGithub } from "react-icons/fa";
 
 function Home() {
   return (
@@ -114,6 +115,18 @@ function Home() {
         src={flowerWhite}
         alt="White-Flowers"
       />
+
+      <div className={styles.contact}>
+        <p>Check out my GitHub for more projects and contact information🤍</p>
+        <a
+          href="https://github.com/ekl0225"
+          target="_blank"
+          rel="noopener noreferrer"
+          className={styles.githubLink}
+        >
+          <FaGithub size={24} /> Visit my GitHub
+        </a>
+      </div>
     </>
   );
 }
