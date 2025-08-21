@@ -5,11 +5,11 @@ import { Typewriter } from "react-simple-typewriter";
 
 function Home() {
   return (
-    <>
+    <div className={styles.Main}>
       <div className={styles.MobileOnly}>
         <div className={styles.Intro}>
           <img
-            className={styles.WhiteFlowers}
+            className={styles.WhiteFlowersMobile}
             src={flowerWhite}
             alt="White Flowers"
           />
@@ -108,13 +108,13 @@ function Home() {
             </div>
           </div>
         </div>
+        <img
+          className={`${styles.CornerFlowerMobile} ${styles.CornerFlower}`}
+          src={flowerWhite}
+          alt="White-Flowers"
+        />
       </div>
-      <img
-        className={styles.CornerFlower}
-        src={flowerWhite}
-        alt="White-Flowers"
-      />
-    </>
+    </div>
   );
 }
 

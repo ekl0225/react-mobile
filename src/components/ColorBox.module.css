@@ -1,7 +1,6 @@
 .Primary:hover,
 .Secondary:hover {
   transform: scale(1.05);
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
 }
 
 /* Funksjonell boks med kopi-knapp */
@@ -14,7 +13,6 @@
   align-items: center;
   justify-content: center;
   color: var(--preset-secondary-floral-white);
-  border-radius: 0;
   z-index: 1;
   transition: background-color 0.2s ease;
 }
@@ -56,4 +54,5 @@
 
 .ColorBox:hover::after {
   background-color: rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0.2rem 1rem rgba(233, 222, 222, 0.841);
 }
