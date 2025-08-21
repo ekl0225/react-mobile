@@ -5,6 +5,7 @@ import MoodBoards from "./pages/MoodBoards";
 import Header from "./components/Header";
 import Projects from "./pages/Projects";
 import Skills from "./pages/Skills";
+import Footer from "./components/Footer";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
         <Route path="/projects" element={<Projects />} />
         <Route path="/skills" element={<Skills />} />
       </Routes>
+      <Footer />
     </Router>
   );
 }
