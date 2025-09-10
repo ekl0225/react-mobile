@@ -1,8 +1,11 @@
 .Hero {
-  display: block;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  margin: 0;
 }
 .Main {
-  min-height: 100vh;
+  flex: 1;
 }
 /* ------------------------ Font Display ------------------------ */
 .Fonts {
@@ -191,18 +194,6 @@
     background-color: rgba(43, 43, 27, 0.5);
   }
 
-  .WhiteFlowers {
-    position: absolute;
-    top: 1;
-    right: 0;
-    height: 100%;
-    width: auto;
-    border-radius: 0 0 0 50%;
-    transform: rotate(-20deg); /* roter 20 grader mot venstre */
-    opacity: 0.7;
-    z-index: 0;
-    pointer-events: none;
-  }
   /* Felles styling for begge tekstblokker */
   .IntroText {
     position: relative;
@@ -244,13 +235,11 @@
     grid-template-columns: repeat(5, 1fr);
   }
   .CornerFlower {
-    position: absolute;
     bottom: 0rem;
     opacity: 0.6;
     transform: rotate(-15deg) scaleX(-1);
     pointer-events: none;
     z-index: -1;
-    margin-bottom: -6rem;
   }
   .WhiteFlowers {
     position: absolute;

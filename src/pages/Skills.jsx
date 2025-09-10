@@ -1,12 +1,10 @@
 import { FaGithub, FaReact, FaHtml5, FaCss3Alt, FaJs } from "react-icons/fa";
-import { SiNextdotjs } from "react-icons/si";
 import styles from "./Skills.module.css";
 
 export default function Skills() {
   const skills = [
     { name: "JavaScript", icon: <FaJs /> },
     { name: "React", icon: <FaReact /> },
-    { name: "Next.js", icon: <SiNextdotjs /> },
     { name: "HTML5", icon: <FaHtml5 /> },
     { name: "CSS3", icon: <FaCss3Alt /> },
   ];

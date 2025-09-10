@@ -2,6 +2,7 @@ import styles from "./Home.module.css";
 import flowerWhite from "../assets/white-flowers-no-back.png";
 import ColorBox from "../components/ColorBox";
 import { Typewriter } from "react-simple-typewriter";
+import Footer from "../components/Footer";
 
 function Home() {
   return (
@@ -114,6 +115,7 @@ function Home() {
           alt="White-Flowers"
         />
       </div>
+      <Footer />
     </div>
   );
 }
