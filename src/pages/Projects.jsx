@@ -24,7 +24,7 @@ export default function Projects() {
   const [activeProject, setActiveProject] = useState(null);
 
   return (
-    <div className={styles.projectsWrapper}>
+    <div className={styles.Main}>
       <h1>My Projects</h1>
       <div className={styles.projectsGrid}>
         {projects.map((project, index) => (
@@ -48,6 +48,14 @@ export default function Projects() {
             className={styles.modalContent}
             onClick={(e) => e.stopPropagation()}
           >
+            
+           <button
+              className={styles.closeButton}
+              onClick={() => setActiveProject(null)}
+           >
+           &times;
+          </button>
+
             <h2 className={styles.title}>{activeProject.title}</h2>
             <iframe
               src={activeProject.url}

@@ -1,4 +1,4 @@
-.projectsWrapper {
+.Main {
   padding: 6rem;
   text-align: center;
 }
@@ -42,6 +42,7 @@
   max-width: 60rem;
   width: 90%;
   text-align: center;
+  position: relative;
 }
 
 h1 {
@@ -71,3 +72,22 @@ h1 {
   background-color: var(--preset-secondary-black-olive);
   text-decoration: none;
 }
+
+.closeButton {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: transparent;
+  border: none;
+  font-size: 2.5rem;
+  color: var(--preset-secondary-black-olive);
+  cursor: pointer;
+  transition: color 0.2s ease;
+  z-index: 10;
+}
+
+.closeButton:hover {
+  color: var(--preset-secondary-floral-white);
+}
+
+

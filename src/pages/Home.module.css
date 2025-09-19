@@ -17,6 +17,10 @@
   background-color: rgba(43, 43, 27, 0.5);
 }
 
+.Font1{
+  margin-bottom: 2.5rem;
+}
+
 .InstrumentSerif {
   font-family: var(--preset-font-instrument-serif);
   font-size: 40px;
@@ -137,7 +141,7 @@
   opacity: 0.6;
   transform: rotate(-15deg) scaleX(-1);
   pointer-events: none;
-  z-index: 0;
+  z-index: -1;
 }
 .MobileOnly {
   display: block;

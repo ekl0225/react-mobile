@@ -10,7 +10,7 @@ export default function Skills() {
   ];
 
   return (
-    <div className={styles.skillsPage}>
+    <div className={styles.Main}>
       <h1>My Skills</h1>
       <a
         href="https://github.com/ekl0225"

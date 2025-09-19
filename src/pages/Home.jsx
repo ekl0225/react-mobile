@@ -35,7 +35,7 @@ function Home() {
 
       <div className={styles.Hero}>
         <div className={styles.Fonts}>
-          <div className={styles.NormalText}>
+          <div className={`${styles.NormalText} ${styles.Font1}`}>
             <p>Font-1</p>
             <div className={styles.InstrumentSerif}>
               <p>Lorem Ipsum</p>

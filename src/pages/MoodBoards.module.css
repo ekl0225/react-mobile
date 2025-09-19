@@ -1,4 +1,4 @@
-.MoodBoardWrapper {
+.Main {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -40,7 +40,6 @@
 
 .ImageBox {
   width: 100%;
-  min-height: 10px;
   object-fit: cover;
 }
 
@@ -139,6 +138,62 @@
   gap: 1rem;
 }
 
+.ModalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0,0,0,0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.ModalContent {
+  position: relative;
+  max-width: 90vw;
+  max-height: 90vh;
+  background: var(--preset-secondary-floral-white);
+  overflow: hidden;
+  box-shadow: 0 0 15px rgba(0,0,0,0.5);
+}
+
+.ModalImage {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.CloseButton {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  font-size: 2rem;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  color: var(--preset-secondary-carbon-black);
+  line-height: 1;
+}
+
+.CloseButton:hover {
+  color: var(--preset-secondary-floral-white);
+}
+
+.ImageHint {
+  font-size: 0.75rem;
+  color: var(--preset-secondary-carbon-black);
+  text-align: center;
+  font-style: var(--preset-font-montserrat);
+  margin-bottom: 1rem;
+  font-weight: 500;
+}
+
+
+
+
 /* MEDIA QUERIES FOR DESKTOP */
 @media (min-width: 1024px) {
   .MoodBoardWrapper {
@@ -200,3 +255,6 @@
     font-size: 1.1rem;
   }
 }
+
+
+

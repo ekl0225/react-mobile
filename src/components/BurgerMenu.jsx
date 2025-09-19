@@ -26,9 +26,9 @@ export default function BurgerMenu() {
 
       <nav className={`${styles.Menu} ${isOpen ? styles.overlay : ""}`}>
         <ul>
-          {currentPath !== "/home" && (
+          {currentPath !== "/" && (
             <li>
-              <Link to="/home" onClick={closeMenu}>
+              <Link to="/" onClick={closeMenu}>
                 Home
               </Link>
             </li>
